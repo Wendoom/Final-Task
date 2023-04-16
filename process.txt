@@ -1,0 +1,20 @@
+Imported rospy, sensor_msg and numpy
+
+Defined the frequency of data generation as 10 Hz.
+
+Initialised acceleration and gyro as numpy arrays. Notice the 2nd entry in the acceleration array is 9.8 which will remain constant.
+
+Created a publisher which publishes to the topic imu/data
+
+Created an integer K, initialised it to 0, this will be used to smoothly increase the data.
+
+In the while loop we put conditions so that it runs for 10 seconds
+
+Then on every interation we increment the value of both acceleration and gyro by 0.001
+
+Then we create the imu message and populate it with data of linear acceleration and velocity.
+
+Finally we publish the imu message
+
+Then we run rostopic echo <name of topic> to show the imu data generated in ROS message format.
+
